@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import com.example.e_commerce.dto.UserRequest;
@@ -35,6 +36,7 @@ public class UserService {
         return mapToResponse(user);
     }
 
+    @Transactional
     public UserResponse createUser(UserRequest userRequest) {
         User user = new User();
         user.setName(userRequest.getName());
@@ -46,6 +48,7 @@ public class UserService {
         return mapToResponse(savedUser);
     }
 
+    @Transactional
     public UserResponse updateUser(Long id, UserRequest userRequest) {
         User user = userRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("User not found with id: " + id));
@@ -58,6 +61,7 @@ public class UserService {
         return mapToResponse(updatedUser);
     }
 
+    @Transactional
     public void deleteUser(Long id) {
         if (!userRepository.existsById(id)) {
             throw new ResourceNotFoundException("User not found with id: " + id);
@@ -67,7 +71,7 @@ public class UserService {
 
     private UserResponse mapToResponse(User user) {
         return new UserResponse(
-                user.getUserID(),
+                user.getId(),
                 user.getName(),
                 user.getEmail());
     }

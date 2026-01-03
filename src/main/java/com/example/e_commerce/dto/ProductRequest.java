@@ -3,6 +3,7 @@ package com.example.e_commerce.dto;
 import java.math.BigDecimal;
 
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
 
 public class ProductRequest {
@@ -11,6 +12,7 @@ public class ProductRequest {
 
     private String description;
 
+    @NotNull(message = "Price is required")
     @Positive(message = "Price must be positive")
     private BigDecimal price;
 

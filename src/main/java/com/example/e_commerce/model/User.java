@@ -33,11 +33,11 @@ public class User {
         this.createdAt = LocalDateTime.now();
     }
 
-    public Long getUserID() {
+    public Long getId() {
         return id;
     }
 
-    public void setUserID(Long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

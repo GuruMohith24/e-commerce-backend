@@ -11,11 +11,11 @@ public class UserResponse {
         this.email = email;
     }
 
-    public Long getUserID() {
+    public Long getId() {
         return id;
     }
 
-    public void setUserID(Long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
