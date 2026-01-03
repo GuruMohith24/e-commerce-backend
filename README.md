@@ -1,3 +1,4 @@
+<a name="top"></a>
 # 🛍️ Enterprise E-Commerce Backend
 
 <div align="center">
@@ -307,6 +308,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 <div align="center">
 
-**[⬆ Back to Top](#-enterprise-e-commerce-backend)**
+**[⬆ Back to Top](#top)**
 
 </div>
