@@ -19,7 +19,7 @@ import com.example.e_commerce.dto.UserResponse;
 import com.example.e_commerce.service.UserService;
 
 @RestController
-@RequestMapping("/api/users") // Changed to /api/users to match convention
+@RequestMapping("/api/users") 
 public class UserController {
 
     private final UserService userService;
